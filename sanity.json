@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "project": {
+    "name": "Joey Yax"
+  },
+  "api": {
+    "projectId": "umbquljr",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "color-picker",
+    "@sanity/vision",
+    "order-documents"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./content-structure.js"
+    },
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
