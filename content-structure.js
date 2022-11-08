@@ -1,14 +1,21 @@
 import S from "@sanity/desk-tool/structure-builder"
+import { orderableDocumentListDeskItem } from "@sanity/orderable-document-list"
+import { IoIosContacts as PartnerIcon } from "react-icons/io"
 import {
+  AiOutlineFolder as ProjectIcon,
+  // AiFillContacts as PartnerIcon,
+  AiOutlineTags as TagIcon,
+  AiOutlineTags as CategoryIcon,
+  AiOutlineOrderedList as RoleIcon,
   AiOutlineHome as HomeIcon,
   AiOutlineInfoCircle as AboutIcon,
   AiOutlineCode as WorkIcon,
   AiOutlineContacts as ContactIcon,
+  AiOutlineControl as SettingsIcon,
 } from "react-icons/ai"
-import { GoSettings as SettingsIcon } from "react-icons/go"
 
-const singles = (listItem) =>
-  !["home", "about", "work", "contact", "settings"].includes(listItem.getId())
+// const singles = (listItem) =>
+//   !["home", "about", "work", "contact", "settings"].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -35,7 +42,32 @@ export default () =>
         ),
       S.divider(),
       // collections
-      ...S.documentTypeListItems().filter(singles),
+      // ...S.documentTypeListItems().filter(singles),
+      orderableDocumentListDeskItem({
+        type: "project",
+        title: "Projects",
+        icon: ProjectIcon,
+      }),
+      orderableDocumentListDeskItem({
+        type: "partner",
+        title: "Partners",
+        icon: PartnerIcon,
+      }),
+      orderableDocumentListDeskItem({
+        type: "tag",
+        title: "Tags",
+        icon: TagIcon,
+      }),
+      orderableDocumentListDeskItem({
+        type: "category",
+        title: "Categories",
+        icon: CategoryIcon,
+      }),
+      orderableDocumentListDeskItem({
+        type: "role",
+        title: "Roles",
+        icon: RoleIcon,
+      }),
       S.divider(),
       // settings
       S.listItem()

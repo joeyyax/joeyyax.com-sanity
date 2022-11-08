@@ -14,7 +14,7 @@
     "@sanity/desk-tool",
     "color-picker",
     "@sanity/vision",
-    "order-documents"
+    "@sanity/orderable-document-list"
   ],
   "parts": [
     {

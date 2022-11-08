@@ -1,4 +1,8 @@
 import { AiOutlineShareAlt as SocialIcon } from "react-icons/ai"
+import {
+  orderRankField,
+  orderRankOrdering,
+} from "@sanity/orderable-document-list"
 
 export default {
   title: "Socials",
@@ -37,11 +41,7 @@ export default {
       name: "url",
       type: "url",
     },
-    {
-      title: "Order",
-      name: "order",
-      type: "number",
-      hidden: true,
-    },
+    orderRankField({ type: "category" }),
   ],
+  orderings: [orderRankOrdering],
 }

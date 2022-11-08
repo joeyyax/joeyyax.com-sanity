@@ -1,4 +1,8 @@
 import SlugInput from "sanity-plugin-better-slug"
+import {
+  orderRankField,
+  orderRankOrdering,
+} from "@sanity/orderable-document-list"
 
 export default {
   title: "Projects",
@@ -177,11 +181,7 @@ export default {
       type: "image",
       group: ["seo"],
     },
-    {
-      name: "order",
-      title: "Order",
-      type: "number",
-      hidden: true,
-    },
+    orderRankField({ type: "category" }),
   ],
+  orderings: [orderRankOrdering],
 }
