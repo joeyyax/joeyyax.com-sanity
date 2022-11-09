@@ -4,7 +4,6 @@ export default {
   title: "Settings",
   name: "settings",
   type: "document",
-  __experimental_actions: ["update", /* 'create', 'delete', */ "publish"],
   icon: SettingsIcon,
   schemaType: "settings",
   fields: [

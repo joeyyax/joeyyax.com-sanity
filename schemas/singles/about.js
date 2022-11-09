@@ -2,7 +2,6 @@ export default {
   title: "About",
   name: "about",
   type: "document",
-  __experimental_actions: ["update", /* 'create', 'delete', */ "publish"],
   schemaType: "page",
   fields: [
     {

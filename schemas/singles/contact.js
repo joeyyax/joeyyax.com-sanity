@@ -2,7 +2,6 @@ export default {
   title: "Contact",
   name: "contact",
   type: "document",
-  __experimental_actions: ["update", /* 'create', 'delete', */ "publish"],
   schemaType: "page",
   fields: [
     {
