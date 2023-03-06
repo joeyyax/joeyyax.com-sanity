@@ -30,6 +30,19 @@ export default {
         validation: (Rule) => Rule.required(),
       },
     },
+    {
+      title: "Logo",
+      name: "logo",
+      type: "image",
+      options: {
+        hotspot: false,
+      },
+    },
+    {
+      title: "Featured",
+      name: "featured",
+      type: "boolean",
+    },
     orderRankField({ type: "category" }),
   ],
   orderings: [orderRankOrdering],

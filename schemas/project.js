@@ -49,6 +49,12 @@ export default {
       group: "page",
     },
     {
+      title: "Subtitle",
+      name: "subtitle",
+      type: "string",
+      group: "page",
+    },
+    {
       title: "Hero Image",
       name: "heroImage",
       type: "image",
